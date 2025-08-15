@@ -1,0 +1,4 @@
+/Users/ana/Desktop/SistemasDistribuidos/ChatP2P/obj/Debug/net9.0/ChatP2P.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ana/Desktop/SistemasDistribuidos/ChatP2P/obj/Debug/net9.0/ChatP2P.AssemblyInfoInputs.cache
+/Users/ana/Desktop/SistemasDistribuidos/ChatP2P/obj/Debug/net9.0/ChatP2P.AssemblyInfo.cs
+/Users/ana/Desktop/SistemasDistribuidos/ChatP2P/obj/Debug/net9.0/ChatP2P.csproj.CoreCompileInputs.cache
