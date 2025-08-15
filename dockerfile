@@ -1,12 +1,5 @@
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 WORKDIR /app
-EXPOSE 8080
-
-ENV ASPNETCORE_URLS=http://+:8080
-ENV MINOMBRE_ES=Ana
-
-
-USER app
 
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG configuration=Release
@@ -14,12 +7,12 @@ WORKDIR /src
 COPY ["ChatP2P.csproj", "./"]
 RUN dotnet restore "ChatP2P.csproj"
 COPY . .
-RUN ls
+WORKDIR "/src/."
 RUN dotnet build "ChatP2P.csproj" -c ${configuration} -o /app/build
 
 FROM build AS publish
 ARG configuration=Release
-RUN dotnet publish "ChatP2P.csproj" -c ${configuration} -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "ChatP2P.csproj" -c ${configuration} -o /app/publish
 
 FROM base AS final
 WORKDIR /app
